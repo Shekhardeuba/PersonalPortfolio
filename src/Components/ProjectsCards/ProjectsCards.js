@@ -1,6 +1,13 @@
 import React from 'react';
 
 const ProjectsCards = () => {
+  const handle = () => {
+    // Define the URL you want to navigate to
+    const link = "https://shekhardeuba.github.io/pokemon/"; 
+  
+    // Use the window.location object to navigate to the link
+    window.location.href = link;
+  };
   return (
     <div className='flex ml-40'>
             <div className="w-full h-full p-8 bg-gray-900 rounded-lg overflow-hidden flex flex-col justify-start items-start space-y-8">
@@ -13,7 +20,8 @@ const ProjectsCards = () => {
             Pokemondex
           </div>
           <div className="w-72 text-center text-gray-500 text-base font-normal leading-7 font-sans ">
-          "PokémonDex is a web app that seamlessly integrates APIs to provide up-to-date Pokémon data. Utilizing React's useState and useEffect hooks, it creates dynamic, responsive content." 
+          "PokémonDex is a web app that seamlessly integrates APIs to provide up-to-date Pokémon data. Utilizing React's useState and useEffect hooks, it creates dynamic, responsive content." <br />
+        <button className='text-white' onClick={handle}>  Link </button>
           </div>
         </div>
       </div>

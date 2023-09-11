@@ -18,7 +18,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="aboutme" className="bg-gray-900 font-deca font-semibold text-4xl p-3">
+    <div id="contact" className="bg-gray-900 font-deca font-semibold text-4xl p-3 ">
       <p className="flex justify-center items-center mt-12 mb-12">
         <span className="text-white">Contact</span>
         <span className="text-yellow-500 ml-3">Me</span>
@@ -30,7 +30,7 @@ const Contact = () => {
           className="bg-gray-900 bg-opacity-90 shadow-md rounded px-8 pt-6 pb-8 mb-4"
           onSubmit={handleSubmit}
         >
- <div className="mb-4">
+ <div className="mb-4 ">
   <input
     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-500 bg-gray-900 leading-tight focus:outline-none focus:shadow-outline"
     id="email"

@@ -82,44 +82,53 @@
 
 
 
-
-
-
 import React, { useState } from "react";
 import Logo from "../../assets/LOGO.png";
 
 const Header = () => {
-    const Links = ['HOME',  'PROJECTS', 'EXPERIENCE','CONTACT'];
+  const Links = ['HOME', 'PROJECTS', 'EXPERIENCE', 'CONTACT'];
 
-    const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
-    return (
-        <nav className="fixed top-0 z-50 w-full bg-gray-900 font-semibold flex justify-between items-center h-20 p-4 font-lexend ">
-            <img src={Logo} width="80" height="80" alt="Logo" />
-            <p className="text-yellow-50 font-mono-bold ml-4 mr-auto">
-                PORTFOLIO
-            </p>
-            <div className="md:hidden">
-                <button
-                    className="text-white"
-                    onClick={toggleMenu}
-                >
-                    ☰
-                </button>
-            </div>
-            <ul className={`md:flex gap-6 text-white font-semibold ${menuOpen ? 'block' : 'hidden'}`}>
-                {Links.map((link) => (
-                    <li key={link}>
-                        <a href="#">{link}</a>
-                    </li>
-                ))}
-            </ul>
-        </nav>
-    );
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
+  return (
+    <nav className="fixed top-0 z-50 w-full bg-gray-900 font-semibold flex justify-between items-center h-20 p-4 font-lexend">
+      <img src={Logo} width="80" height="80" alt="Logo" />
+      <p className="text-yellow-50 font-mono-bold ml-4 mr-auto">
+        PORTFOLIO
+      </p>
+      <div className="md:hidden">
+        <button className="text-white" onClick={toggleMenu}>
+          ☰
+        </button>
+      </div>
+      <ul className={`md:flex gap-6 text-white font-semibold ${menuOpen ? 'block' : 'hidden'}`}>
+        {Links.map((link) => (
+          <li key={link}>
+            <a
+              href="#"
+              onClick={() => scrollToSection(link.toLowerCase())}
+            >
+              {link}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
 };
 
 export default Header;

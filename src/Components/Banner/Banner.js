@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 
 const Banner = () => {
     return (
-        <div className="flex justify-between bg-black font-lexend">
+        <div id="banner" className="flex justify-between bg-black font-lexend">
             <div className=" mt-40  ml-32">
                 <h1 className="text-yellow-500 text-xl">
                     Hello Welcome

@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 
 const Experience = () => {
   return (
-    <div id='aboutme' className="bg-black font-lexend font-deca font-semibold text-4xl p-3">
+    <div id='experience' className="bg-black font-lexend font-deca font-semibold text-4xl p-3">
 
       <p className="flex justify-center items-center mt-12 mb-12">
         <span className="text-white">Experien</span>
