@@ -26,7 +26,7 @@ const Banner = () => {
 />
 
 </div>
-<div className="text-gray-600 text-base font-deca font-normal leading-[1.75] break-words">
+<div className="text-gray-600 mb-4 text-base font-deca font-normal leading-[1.75] break-words">
           <p>
             "Junior React/Node.js developer passionate about crafting
             <br />
@@ -39,7 +39,7 @@ const Banner = () => {
 
             </div>
             <div className="mt-32 mb-12 mr-60">
-            <img src={image} width="450" height="450"/>
+            {/* <img src={image} width="450" height="450"/> */}
             </div>
 
         </div>
